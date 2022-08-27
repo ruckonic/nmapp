@@ -53,13 +53,14 @@ export function FilmsList() {
 
         return (
           <View style={styles.listItem}>
-            <Text style={styles.listItemTitleText}>
-              {item.node.episodeID ?? '-'}
-            </Text>
-            <Text style={styles.listItemTitleText}>
-              {item.node.title || 'No title'}
-            </Text>
-
+            <View style={styles.listHeaderContainer}>
+              <Text style={styles.listItemTitleText}>
+                {item.node.episodeID ?? '-'}
+              </Text>
+              <Text style={styles.listItemTitleText}>
+                {item.node.title || 'No title'}
+              </Text>
+            </View>
             {item.node.planetConnection && (
               <PlanetList filmsRef={item.node.planetConnection} />
             )}
@@ -74,7 +75,11 @@ const styles = StyleSheet.create({
   listItem: {
     padding: 20,
   },
+  listHeaderContainer: {
+    flexDirection: 'row',
+  },
   listItemTitleText: {
+    paddingStart: 2,
     fontSize: 20,
     fontWeight: 'bold',
   },

@@ -13,13 +13,14 @@ export function PlanetList({filmsRef}: PlaneListProps) {
     graphql`
       fragment PlanetList_planets on FilmPlanetsConnection {
         planets {
+          id
           name
         }
       }
     `,
     filmsRef,
   )
-  console.log(data)
+
   return (
     <View style={styles.container}>
       <FlatList
