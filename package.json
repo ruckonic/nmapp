@@ -1,0 +1,66 @@
+{
+  "name": "mnapp",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "pod:install": "pod install --project-directory=\"ios\"",
+    "start": "react-native start",
+    "relay": "relay-compiler",
+    "relay:watch": "yarn run relay --watch",
+    "test": "jest",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "schema:download": "gql-tools schema https://swapi-graphql.netlify.app/.netlify/functions/index ./schema"
+  },
+  "dependencies": {
+    "@react-navigation/native": "^6.0.12",
+    "@react-navigation/native-stack": "^6.8.0",
+    "graphql": "^16.6.0",
+    "react": "18.0.0",
+    "react-native": "0.69.4",
+    "react-native-safe-area-context": "^4.3.3",
+    "react-native-screens": "^3.16.0",
+    "react-relay": "^14.1.0",
+    "relay-runtime": "^14.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@nerdify/gql-tools": "^0.0.0-alpha-1",
+    "@react-native-community/eslint-config": "^3.1.0",
+    "@tsconfig/react-native": "^2.0.2",
+    "@types/jest": "^28.1.8",
+    "@types/react-native": "^0.69.3",
+    "@types/react-relay": "^14.1.1",
+    "@types/react-test-renderer": "^18.0.0",
+    "@types/relay-runtime": "^14.1.2",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-relay": "^14.1.0",
+    "babel-plugin-transform-inline-environment-variables": "^0.4.4",
+    "eslint": "^8.22.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.8.7",
+    "eslint-plugin-prettier": "^4.2.1",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.70.3",
+    "prettier": "^2.7.1",
+    "react-test-renderer": "18.0.0",
+    "relay-compiler": "^14.1.0",
+    "relay-compiler-language-typescript": "^15.0.1",
+    "typescript": "^4.4.4"
+  },
+  "jest": {
+    "preset": "react-native",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  }
+}

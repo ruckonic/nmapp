@@ -1,0 +1,2 @@
+documents: '**/*.{ts,tsx}'
+schema: 'schema/schema.graphql'
