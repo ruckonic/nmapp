@@ -11,7 +11,7 @@ export async function fetchGraphQL(
         'content-type': 'application/json',
       },
     },
-  )
+  );
 
-  return response.json()
+  return response.json();
 }

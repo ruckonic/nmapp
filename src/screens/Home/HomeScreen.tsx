@@ -1,7 +1,7 @@
-import React, {Suspense} from 'react'
-import {SafeAreaView, Text, View} from 'react-native'
+import React, {Suspense} from 'react';
+import {SafeAreaView, Text, View} from 'react-native';
 
-import {FilmsList} from './FilmsList'
+import {FilmsList} from './FilmsList';
 
 export function HomeScreen() {
   return (
@@ -15,5 +15,5 @@ export function HomeScreen() {
         <FilmsList />
       </Suspense>
     </SafeAreaView>
-  )
+  );
 }

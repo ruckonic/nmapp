@@ -1,11 +1,11 @@
-import React from 'react'
-import {FlatList, StyleSheet, Text, View} from 'react-native'
-import {graphql, useFragment} from 'react-relay'
+import React from 'react';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
+import {graphql, useFragment} from 'react-relay';
 
-import {PlanetList_planets$key} from '__generated__/PlanetList_planets.graphql'
+import {PlanetList_planets$key} from '../../__generated__/PlanetList_planets.graphql';
 
 interface PlaneListProps {
-  filmsRef: PlanetList_planets$key
+  filmsRef: PlanetList_planets$key;
 }
 
 export function PlanetList({filmsRef}: PlaneListProps) {
@@ -19,7 +19,7 @@ export function PlanetList({filmsRef}: PlaneListProps) {
       }
     `,
     filmsRef,
-  )
+  );
 
   return (
     <View style={styles.container}>
@@ -28,11 +28,11 @@ export function PlanetList({filmsRef}: PlaneListProps) {
         renderItem={({item}) => <Text>{item?.name ?? 'Unknown Planet'}</Text>}
       />
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
     paddingLeft: 8,
   },
-})
+});
