@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<2b4d3a454d32254e9c927675f1db762c>>
+ * @generated SignedSource<<3a1bed4a1d80f443b6e68c61939ea0de>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -10,20 +10,20 @@
 
 import { ConcreteRequest, Query } from 'relay-runtime';
 import { FragmentRefs } from "relay-runtime";
-export type FilmsListQuery$variables = {};
+export type FilmsListQuery$variables = Record<PropertyKey, never>;
 export type FilmsListQuery$data = {
   readonly allFilms: {
     readonly edges: ReadonlyArray<{
       readonly node: {
-        readonly episodeID: number | null;
+        readonly episodeID: number | null | undefined;
         readonly id: string;
         readonly planetConnection: {
           readonly " $fragmentSpreads": FragmentRefs<"PlanetList_planets">;
-        } | null;
-        readonly title: string | null;
-      } | null;
-    } | null> | null;
-  } | null;
+        } | null | undefined;
+        readonly title: string | null | undefined;
+      } | null | undefined;
+    } | null | undefined> | null | undefined;
+  } | null | undefined;
 };
 export type FilmsListQuery = {
   response: FilmsListQuery$data;
@@ -164,14 +164,14 @@ return {
                         "name": "planets",
                         "plural": true,
                         "selections": [
+                          (v0/*: any*/),
                           {
                             "alias": null,
                             "args": null,
                             "kind": "ScalarField",
                             "name": "name",
                             "storageKey": null
-                          },
-                          (v0/*: any*/)
+                          }
                         ],
                         "storageKey": null
                       }
@@ -190,12 +190,12 @@ return {
     ]
   },
   "params": {
-    "cacheID": "13c6db44cbce527088af2f6d8c95ccc6",
+    "cacheID": "33dd737bdc129dc4d37a86cca64fca3c",
     "id": null,
     "metadata": {},
     "name": "FilmsListQuery",
     "operationKind": "query",
-    "text": "query FilmsListQuery {\n  allFilms {\n    edges {\n      node {\n        id\n        episodeID\n        title\n        planetConnection {\n          ...PlanetList_planets\n        }\n      }\n    }\n  }\n}\n\nfragment PlanetList_planets on FilmPlanetsConnection {\n  planets {\n    name\n    id\n  }\n}\n"
+    "text": "query FilmsListQuery {\n  allFilms {\n    edges {\n      node {\n        id\n        episodeID\n        title\n        planetConnection {\n          ...PlanetList_planets\n        }\n      }\n    }\n  }\n}\n\nfragment PlanetList_planets on FilmPlanetsConnection {\n  planets {\n    id\n    name\n  }\n}\n"
   }
 };
 })();

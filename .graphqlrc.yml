@@ -1,2 +1,2 @@
-documents: '**/*.{ts,tsx}'
-schema: 'schema/schema.graphql'
+documents: "**/*.{ts,tsx}"
+schema: "schema/schema.graphql"

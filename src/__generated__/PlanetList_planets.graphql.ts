@@ -1,5 +1,5 @@
 /**
- * @generated SignedSource<<6ead2d38dde8b64d335818c2c12ef617>>
+ * @generated SignedSource<<ad552414c9181a8168290faf2e38c7d4>>
  * @lightSyntaxTransform
  * @nogrep
  */
@@ -12,8 +12,9 @@ import { Fragment, ReaderFragment } from 'relay-runtime';
 import { FragmentRefs } from "relay-runtime";
 export type PlanetList_planets$data = {
   readonly planets: ReadonlyArray<{
-    readonly name: string | null;
-  } | null> | null;
+    readonly id: string;
+    readonly name: string | null | undefined;
+  } | null | undefined> | null | undefined;
   readonly " $fragmentType": "PlanetList_planets";
 };
 export type PlanetList_planets$key = {
@@ -39,6 +40,13 @@ const node: ReaderFragment = {
           "alias": null,
           "args": null,
           "kind": "ScalarField",
+          "name": "id",
+          "storageKey": null
+        },
+        {
+          "alias": null,
+          "args": null,
+          "kind": "ScalarField",
           "name": "name",
           "storageKey": null
         }
@@ -50,6 +58,6 @@ const node: ReaderFragment = {
   "abstractKey": null
 };
 
-(node as any).hash = "2521690f03ffd1612a42f4f1810e4810";
+(node as any).hash = "51b095b226e7bb5f200fd02e3d241c80";
 
 export default node;
